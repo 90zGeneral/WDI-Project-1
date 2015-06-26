@@ -49,13 +49,18 @@ input::-webkit-input-placeholder {
 	/*border: 1px solid white;*/
 	margin: 0 auto;
 }
-.row0 {
+#row0 {
 	display: inline-block;
 }
-.col0, .col1, .col2, .col3, .col4, .col5, .col6 {
+.cols {
 	float: left;
 	width: 100px;
 	height: 100px;
 	border: 1px solid white;
 	border-radius: 50%;
 }
+
+
+
+
+

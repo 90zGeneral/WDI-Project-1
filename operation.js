@@ -19,7 +19,8 @@ var board = function() {                             //A function with 2 paramet
 			var row = ("row"+x);                       //Create variable row to holds the position of each row each time it iterates through the loop. 
 			var col = ("col"+z);                       //Samething here for columns
 			operation.table[x].push(new Cell (row, col)); //Access the table key in the operation object and push the new values of each cell in that empty array
-			$('.row').eq(x).append($('<div>').addClass('row'+x).addClass('col'+z));  //Add the newly created divs with 2 classes each to the existing parent rows to make each one unique
+			var newDiv = $('<div>').addClass('cols').addClass('row'+x+'col'+z);
+			$('.row').eq(x).append(newDiv);  //Add the newly created divs with 2 classes each to the existing parent rows to make each one unique
 		}
 	}
 };
