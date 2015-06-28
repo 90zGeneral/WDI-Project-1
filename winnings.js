@@ -5,6 +5,49 @@ var a1 = $('.row0col0'), a2 = $('.row0col1'), a3 = $('.row0col2'), a4 = $('.row0
 	e1 = $('.row4col0'), e2 = $('.row4col1'), e3 = $('.row4col2'), e4 = $('.row4col3'), e5 = $('.row4col4'), e6 = $('.row4col5'), e7 = $('.row4col6'),
 	f1 = $('.row5col0'), f2 = $('.row5col1'), f3 = $('.row5col2'), f4 = $('.row5col3'), f5 = $('.row5col4'), f6 = $('.row5col5'), f7 = $('.row5col6') 
 
+a1.push('.row0col0');
+a2.push('.row0col1');
+a3.push('.row0col2');
+a4.push('.row0col3');
+a5.push('.row0col4');
+a6.push('.row0col5');
+a7.push('.row0col6');
+b1.push('.row1col0');
+b2.push('.row1col1');
+b3.push('.row1col2');
+b4.push('.row1col3');
+b5.push('.row1col4');
+b6.push('.row1col5');
+b7.push('.row1col6');
+c1.push('.row2col0');
+c2.push('.row2col1');
+c3.push('.row2col2');
+c4.push('.row2col3');
+c5.push('.row2col4');
+c6.push('.row2col5');
+c7.push('.row2col6');
+d1.push('.row3col0');
+d2.push('.row3col1');
+d3.push('.row3col2');
+d4.push('.row3col3');
+d5.push('.row3col4');
+d6.push('.row3col5');
+d7.push('.row3col6');
+e1.push('.row4col0');
+e2.push('.row4col1');
+e3.push('.row4col2');
+e4.push('.row4col3');
+e5.push('.row4col4');
+e6.push('.row4col5');
+e7.push('.row4col6');
+f1.push('.row5col0');
+f2.push('.row5col1');
+f3.push('.row5col2'); 
+f4.push('.row5col3'); 
+f5.push('.row5col4');
+f6.push('.row5col5');
+f7.push('.row5col6');
+
 var winningCombos = [
 					[f4, e5, d6, c7], [f3, e4, d5, c6], [e4, d5, c6, b7], [f2, e3, d4, c5], [e3, d4, c5, b6],
 					[d4, c5, b6, a7], [f1, e2, d3, c4], [e2, d3, c4, b5], [d3, c4, b5, a6], [e1, d2, c3, b4],
@@ -23,28 +66,30 @@ var winningCombos = [
 					];
 
 
+
 var whoWon = function () {
 	for(var i = 0; i < winningCombos.length; i++) {
-		var redCount = 0,
-			blueCount = 0;
 		for(var j = 0; j < winningCombos[i].length; j++) {
-			if (winningCombos[i][j].attr('class') === 'player1') {
-				redCount++;
-				if(redCount === 4) {
-					alert("player1 won");
+			var redCount = 0,
+			blueCount = 0;
+			for (var k = 0; k < winningCombos[i][j].length; k++) {
+				if (winningCombos[i][j][k].attr('class') === 'player1') {
+					redCount++;
+					if(redCount === 4) {
+						alert("player1 won");
+					}
+					console.log('player1 ' + blueCount);
 				}
-				console.log('player1 ' + blueCount);
-			}
-			else if (winningCombos[i][j].attr('class') === 'player2') {
-				blueCount++;
-				console.log('player2 ' + redCount);
-				if (redCount === 4) {
-					alert("player2 won");
+				else if (winningCombos[i][j][k].attr('class') === 'player2') {
+					blueCount++;
+					if (blueCount === 4) {
+						alert("player2 won");
+					}
+					console.log('player2 ' + redCount);
 				}
 			}
-		}
-		
-		
+		}	
 	}
 
 };
+whoWon();

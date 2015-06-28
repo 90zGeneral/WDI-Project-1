@@ -14,7 +14,7 @@ var circle = ['a1','a2','a3','a4','a5','a6','a7',
 			  'a36','a37','a38','a39','a40','a41','a42'];
 
 
-var board = function() {                                           //A function with 2 parameters that represents the amount of rows and columns
+var board = function() {                                           //A function for the creation of the board and the cells it contains.
 	for(var x = 0; x < operation.rowsAmount; x++) {               //This for loop is for creating the rows
 		operation.table.push([]);                                //Push arrays into the table array to create a nested array with rows and columns 
 		var createRow = $('<div>').addClass('row');                //Create a div element with a class and the loop with create the addition others 

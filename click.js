@@ -24,7 +24,6 @@ var clicked = function() {                          //This function contains eve
 		target.css('background-color', 'blue');
 		turn = 0;	
 	}
-	console.log(target);
 
 };
 
