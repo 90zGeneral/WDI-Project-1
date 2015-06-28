@@ -49,7 +49,7 @@ input::-webkit-input-placeholder {
 	/*border: 1px solid white;*/
 	margin: 0 auto;
 }
-#row0 {
+.row0 {
 	display: inline-block;
 }
 .cols {
